@@ -96,23 +96,23 @@ html, body {
     
 
 }
-.product-grid > li > img {
+.product-grid > li > a > img {
 height: 150px
     
 }
-.product-grid > li >  hgroup {
+.product-grid > li > a > hgroup {
     text-align: center;
     display: block;
     
 }
-.product-grid > li >  hgroup > h4{
+.product-grid > li > a > hgroup > h4{
     
 }
-.product-grid > li > hgroup > h5{
+.product-grid > li > a > hgroup > h5{
     display: inline-block;
     
 }
-.product-grid > li >  hgroup > img {
+.product-grid > li > a >  hgroup > img {
     position: absolute;
     top: -9px;
     right: -9px;
@@ -123,17 +123,17 @@ height: 150px
     
 @media all and (max-width:960px) {
 
-.product-grid > li {
+.product-grid > li > a > {
     width: 50%; 
 }
 }
 
 @media all and (max-width:540px) {
 
-.product-grid > li {
+.product-grid > li > a > {
      width: 100%;
 }
-    
+}
  
     
     
@@ -146,16 +146,17 @@ height: 150px
 }
 .product-detail > section {
     font-family: 'jockey one';
-    
-        
-    }
+    overflow: hidden;
+    text-align: center;
+}
  .product-detail > section > h1 {
      text-align: center
         
     }
 .product-detail > section > .photo-gallery {
-        
-    }
+    text-align: center;
+    margin: 0 0 48px 0;
+}
 .product-detail > section > .photo-gallery > .primary-photo {
     height: 200px;
     background-size: contain;
@@ -165,7 +166,7 @@ height: 150px
 .product-detail > section > .photo-gallery > img {
     max-width: 19%;
     max-height: 96px;
-    float: left;
+    
     border:3px solid white;
     margin: 1px;
     padding: 9px;
@@ -211,13 +212,27 @@ height: 150px
     
     
 }
-div.choices {
+
+
+.choices {
     text-align: center;
+    clear: both;
+    background: #f16;
+    overflow: hidden;
 }
 .choices > label {
-    
+    display: inline-block;
+    clear: both;
+    margin: 6px;
+    padding: 0px 12px;
+    border: 3px solid #ccc;
+    border-radius: 96px;
+    white-space: nowrap;
+    font-size: 16px; 
 }
 .choices > label > img {
+    display: inline-block;
+    vertical-align: middle;
     width: 100%;
-    max-width: 96px;
+    max-width: 36px;
 }
