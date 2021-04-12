@@ -96,8 +96,14 @@ html, body {
     
 
 }
+.product-grid > li > a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #000;
+}
 .product-grid > li > a > img {
-height: 150px
+    height: 150px
     
 }
 .product-grid > li > a > hgroup {
@@ -123,14 +129,14 @@ height: 150px
     
 @media all and (max-width:960px) {
 
-.product-grid > li > a > {
+.product-grid > li {
     width: 50%; 
 }
 }
 
 @media all and (max-width:540px) {
 
-.product-grid > li > a > {
+.product-grid > li {
      width: 100%;
 }
 }
