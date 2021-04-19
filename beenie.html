@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="/style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.29/default/snipcart.css" />
+</head>
+<body>
+    <div class="product-detail">
+        <section>
+            <h1>
+                Bussin Beenie
+            </h1>
+            <div class="photo-gallery">
+                <div class="primary-photo" style="background-image: url(/images/beenie/black-beenie.png)">
+                    
+                </div>
+                <img src="images/beenie/black-beenie.png"/>
+                <img src="images/beenie/darkgrey-beenie.png"/>
+                <img src="images/beenie/grey-black-beenie.png"/>
+                <img src="images/beenie/lightgrey-beenie.png"/>
+            </div>
+        </section>
+        <section> 
+            <h2>
+                $20.99
+            </h2>
+            
+            <form>
+                <div class="choices">
+                    <label>
+                        <img src="images/beenie/black-beenie.png"/>
+                        <input type="radio"
+                           name="color" value="Black">
+                        Black
+                    </label>
+                    
+                    <label>
+                        <img src="images/beenie/darkgrey-beenie.png"/>
+                        <input type="radio"
+                           name="color" value="Dark Grey">
+                        Dark Grey
+                    </label>
+                    
+                    <label>
+                        <img src="images/beenie/grey-black-beenie.png"/>
+                        <input type="radio"
+                           name="color" value="White">
+                        Grey and Black
+                    </label>
+                    
+                    <label>
+                        <img src="images/beenie/lightgrey-beenie.png"/>
+                        <input type="radio"
+                           name="color" value="Brown">
+                        Light Grey
+                    </label>
+                    
+                
+                </div>
+                <a class="snipcart-add-item"
+                   data-item-id="starry-night"
+                      data-item-price="20.99"
+                      data-item-url="/paintings/starry-night"
+                      data-item-description="Bussin Beenie"
+                    data-item-custom1-name="Color"
+                    data-item-custom1-options="Black|Dark Grey|Grey and Black|Light Grey"
+                      data-item-image="/assets/images/starry-night.jpg"
+                      data-item-name="Bussin Beenie">
+                    Add To Cart
+                 </a>
+                
+            </form>
+        </section>
+   
+    </div>
+    <script type="text/javascript">
+        $( ".photo-gallery > img" ).click(function() {
+        var imgSrc= $(this).attr("src");
+        $('.primary-photo').attr('style',"background-image: url("+imgSrc+");");
+        });
+        
+        $( ".product-detail form input" ).change(function() {
+            var productColor= $(this).val();
+            $('.snipcart-add-item').attr('data-item-custom1-value',productColor);
+        });
+    </script>
+    <script async src="https://cdn.snipcart.com/themes/v3.0.29/default/snipcart.js">
+    </script>
+    <div id="snipcart" data-config-modal-style="side" data-api-key="OWI5Mjc5NTUtMWI1Ni00ZGFhLTljZDUtZWM2YTIwM2U1ZGE0NjM3NDgzOTY3MTMxNTQ4NTE3" hidden></div>
+</body>
+</html>

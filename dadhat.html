@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="/style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.29/default/snipcart.css" />
+</head>
+<body>
+    <div class="product-detail">
+        <section>
+            <h1>
+                Bussin Dad Hat
+            </h1>
+            <div class="photo-gallery">
+                <div class="primary-photo" style="background-image: url(/images/dadhats/black-dadhat.png)">
+                    
+                </div>
+                <img src="images/dadhats/black-dadhat.png"/>
+                <img src="images/dadhats/pink-dadhat.png"/>
+                <img src="images/dadhats/white-dadhat.png"/>
+                <img src="images/dadhats/brown-dadhat.png"/>
+            </div>
+        </section>
+        <section> 
+            <h2>
+                $24.99
+            </h2>
+            
+            <form>
+                <div class="choices">
+                    <label>
+                        <img src="images/dadhats/black-dadhat.png"/>
+                        <input type="radio"
+                           name="color" value="Black">
+                        Black
+                    </label>
+                    
+                    <label>
+                        <img src="images/dadhats/pink-dadhat.png"/>
+                        <input type="radio"
+                           name="color" value="Pink">
+                        Pink
+                    </label>
+                    
+                    <label>
+                        <img src="images/dadhats/white-dadhat.png"/>
+                        <input type="radio"
+                           name="color" value="White">
+                        White
+                    </label>
+                    
+                    <label>
+                        <img src="images/dadhats/brown-dadhat.png"/>
+                        <input type="radio"
+                           name="color" value="Brown">
+                        Brown
+                    </label>
+                    
+                
+                </div>
+                <a class="snipcart-add-item"
+                   data-item-id="starry-night"
+                      data-item-price="24.99"
+                      data-item-url="/paintings/starry-night"
+                      data-item-description="Bussin Dad Hat"
+                    data-item-custom1-name="Color"
+                    data-item-custom1-options="Black|Pink|White|Brown"
+                      data-item-image="/assets/images/starry-night.jpg"
+                      data-item-name="Bussin Dad Hat">
+                    Add To Cart
+                 </a>
+                
+            </form>
+        </section>
+   
+    </div>
+    <script type="text/javascript">
+        $( ".photo-gallery > img" ).click(function() {
+        var imgSrc= $(this).attr("src");
+        $('.primary-photo').attr('style',"background-image: url("+imgSrc+");");
+        });
+        
+        $( ".product-detail form input" ).change(function() {
+            var productColor= $(this).val();
+            $('.snipcart-add-item').attr('data-item-custom1-value',productColor);
+        });
+    </script>
+    <script async src="https://cdn.snipcart.com/themes/v3.0.29/default/snipcart.js">
+    </script>
+    <div id="snipcart" data-config-modal-style="side" data-api-key="OWI5Mjc5NTUtMWI1Ni00ZGFhLTljZDUtZWM2YTIwM2U1ZGE0NjM3NDgzOTY3MTMxNTQ4NTE3" hidden></div>
+</body>
+</html>
