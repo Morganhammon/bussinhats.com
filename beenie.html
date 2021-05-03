@@ -33,28 +33,28 @@
                     <label>
                         <img src="images/beenie/black-beenie.png"/>
                         <input type="radio"
-                           name="color" value="Black">
+                           name="color" value="Black" data-variant="4629">
                         Black
                     </label>
                     
                     <label>
                         <img src="images/beenie/darkgrey-beenie.png"/>
                         <input type="radio"
-                           name="color" value="Dark Grey">
+                           name="color" value="Dark Grey" data-variant="4630">
                         Dark Grey
                     </label>
                     
                     <label>
                         <img src="images/beenie/grey-black-beenie.png"/>
                         <input type="radio"
-                           name="color" value="Grey and Black">
+                           name="color" value="Grey and Black" data-variant="4631">
                         Grey and Black
                     </label>
                     
                     <label>
                         <img src="images/beenie/lightgrey-beenie.png"/>
                         <input type="radio"
-                           name="color" value="Light Grey">
+                           name="color" value="Light Grey" data-variant="11059">
                         Light Grey
                     </label>
                     
@@ -68,7 +68,13 @@
                     data-item-custom1-name="Color"
                     data-item-custom1-options="Black|Dark Grey|Grey and Black|Light Grey"
                       data-item-image="images/beenie/black-beenie.png"
-                      data-item-name="Bussin Beenie">
+                      data-item-name="Bussin Beenie"
+                   data-item-custom2-name="variant"
+                   data-item-custom2-type="hidden"
+                   data-item-custom2-value="4629"
+                   data-item-custom3-name="Print File"
+                   data-item-custom3-type="hidden"
+                   data-item-custom3-value="https://hardwarecampaigns.com/images/shirt-print.png">
                     Add To Cart
                  </a>
                 
@@ -85,6 +91,9 @@
         $( ".product-detail form input" ).change(function() {
             var productColor= $(this).val();
             $('.snipcart-add-item').attr('data-item-custom1-value',productColor);
+            var variant= $(this).data('variant');   
+            $('.snipcart-add-item').attr('data-item-custom2-value',variant);
+
         });
     </script>
     <script async src="https://cdn.snipcart.com/themes/v3.0.29/default/snipcart.js">

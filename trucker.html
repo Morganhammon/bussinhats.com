@@ -85,6 +85,9 @@
         $( ".product-detail form input" ).change(function() {
             var productColor= $(this).val();
             $('.snipcart-add-item').attr('data-item-custom1-value',productColor);
+            var variant= $(this).data('variant');
+            $('.snipcart-add-item').attr('data-item-custom2-value',variant);
+
         });
     </script>
     <script async src="https://cdn.snipcart.com/themes/v3.0.29/default/snipcart.js">

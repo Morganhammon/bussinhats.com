@@ -48,7 +48,7 @@
                     <label>
                         <img src="images/flatbrim/grey-snapback.png"/>
                         <input type="radio"
-                           name="color" value="Grey">
+                           name="color" value="Grey" data-variant="">
                         Grey
                     </label>
                     
@@ -68,14 +68,14 @@
                 
                 </div>
                 <a class="snipcart-add-item"
-                   data-item-id="bussin-snapback"
-                      data-item-price="24.99"
-                      data-item-url="https://bussinhats.com/snapback.html"
-                      data-item-description="Bussin Snapback Hat"
+                    data-item-id="bussin-snapback"
+                    data-item-price="24.99"
+                    data-item-url="https://bussinhats.com/snapback.html"
+                    data-item-description="Bussin Snapback Hat"
                     data-item-custom1-name="Color"
                     data-item-custom1-options="Black and Purple|Grey and Black|Grey|White and Black|White"
-                      data-item-image="/assets/images/black-purple-snapback.png"
-                      data-item-name="Bussin Snapback Hat">
+                    data-item-image="/assets/images/black-purple-snapback.png"
+                    data-item-name="Bussin Snapback Hat">
                     Add To Cart
                  </a>
                 
@@ -92,6 +92,9 @@
         $( ".product-detail form input" ).change(function() {
             var productColor= $(this).val();
             $('.snipcart-add-item').attr('data-item-custom1-value',productColor);
+            var variant= $(this).data('variant');
+            $('.snipcart-add-item').attr('data-item-custom2-value',variant);
+
         });
     </script>
     <script async src="https://cdn.snipcart.com/themes/v3.0.29/default/snipcart.js">
